@@ -13,7 +13,8 @@ R10.4 paper commands: The generated raw Nanopore data were basecalled in super-a
 
 The known Nanopore adapters that Porechop looks for are defined in the adapters.py file
 
-Basic adapter trimming: ```porechop -i input_reads.fastq.gz -o output_reads.fastq.gz```
+Basic adapter trimming: 
+```porechop -i input_reads.fastq.gz -o output_reads.fastq.gz```
 
 
 ## NanoFilt - Read trimming and filtering
