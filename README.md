@@ -14,6 +14,7 @@ R10.4 paper commands: The generated raw Nanopore data were basecalled in super-a
 The known Nanopore adapters that Porechop looks for are defined in the adapters.py file
 
 Basic adapter trimming: 
+
 ```porechop -i input_reads.fastq.gz -o output_reads.fastq.gz```
 
 
@@ -49,15 +50,12 @@ Use minimap2 to map the trimmed nanofilt reads back to the flye assembly and the
 
 ```racon [options ...] <sequences> <overlaps> <target sequences>```
 
-    ```<sequences>
-        input file in FASTA/FASTQ format (can be compressed with gzip)
-        containing sequences used for correction
-    <overlaps>
-        input file in MHAP/PAF/SAM format (can be compressed with gzip)
-        containing overlaps between sequences and target sequences
-    <target sequences>
-        input file in FASTA/FASTQ format (can be compressed with gzip)
-        containing sequences which will be corrected```
+    
+sequences: input file in FASTA/FASTQ format (can be compressed with gzip) containing sequences used for correction
+
+overlaps: input file in MHAP/PAF/SAM format (can be compressed with gzip) containing overlaps between sequences and target sequences
+
+target sequences: input file in FASTA/FASTQ format (can be compressed with gzip) containing sequences which will be corrected
      
 
 ## Medaka - Error Correction / Polishing 
