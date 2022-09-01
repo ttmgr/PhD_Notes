@@ -26,8 +26,18 @@ The above command will use the default values of porechop to search for adapters
 ## Filtering
 -NanoFilt
 
+```shell
+$ NanoFilt -q 7 -l 200 <porechopped.fastq> > <nanofiltered.fastq>
+```
+Removes all reads with a read quality score below 7 and shorter than 200bp
+
 ## Assembly
 -Flye
+
+```shell
+$ flye --meta --nano-hq <input.fastq> -o /output_dir --genome-size 1m -i 7
+```
+The above command uses the high-quality polished nanopore reads and assembles the genome. The estimated --genome-size is an obligatory input. The --meta option is for metagenomic approaches. 
 
 ## Polishing
 -minimap2
