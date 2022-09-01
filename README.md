@@ -1,4 +1,51 @@
-# PhD_Notes
+# Workflow Metagenomics
+# Tim Reska 
+
+The following github presents a pipeline for the assembly of transcriptomes based on short or long reads as well as 
+combined approach.
+
+
+# Applied Sofwarte
+## basecalling 
+-guppy basecaller
+
+## Adapter Removal
+-Porechop
+
+## Filtering
+-NanoFilt
+
+## Assembly
+-Flye
+
+## Polishing
+-minimap2
+-Racon
+-Medaka
+
+## Binning
+-MetaBat2
+-MaxBin2
+-Vamb
+
+## Bin Refining
+-DAS Tool
+
+## Bin coverage
+-CoverM
+
+## Bin QC
+-CheckM
+
+## Bin Classification
+-GDTB-Tk
+
+## Bin Clustering
+-dRep
+
+## Downstream Analysis
+## Sorting program
+-samtools applied on both to sort the reads by coordinates
 
 
 ## Guppy - Translating electrices signal into nucleotides
