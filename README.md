@@ -41,6 +41,10 @@ The above command uses the high-quality polished nanopore reads and assembles th
 
 ## Polishing
 -minimap2
+
+```shell
+$ minimap2 -ax map-ont <flye_assembly.fasta> <reads.fastq> > <output.sam> -j 10
+```
 -Racon
 -Medaka
 
