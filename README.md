@@ -1,11 +1,7 @@
 # Workflow Metagenomics
 # Tim Reska 
 
-The following github presents a pipeline for the assembly of transcriptomes based on short or long reads as well as 
-combined approach.
-
-
-# Applied Sofwarte
+# Applied software and the corresponding console commands
 ## basecalling 
 -guppy basecaller
 
