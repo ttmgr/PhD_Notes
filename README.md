@@ -9,6 +9,13 @@ combined approach.
 ## basecalling 
 -guppy basecaller
 
+### Translating the electrical signal into bases
+```shell
+$ guppy_basecaller -i /input_directory_fast5 -s /output_directory -c <configuration_filge.cfg> [options]
+```
+The configuration file comprises the used nanopore device and the corresponding kit
+
+
 ## Adapter Removal
 -Porechop
 
