@@ -9,7 +9,6 @@ combined approach.
 ## basecalling 
 -guppy basecaller
 
-### Translating the electrical signal into bases
 ```shell
 $ guppy_basecaller -i /input_directory_fast5 -s /output_directory -c <configuration_filge.cfg> [options]
 ```
@@ -18,6 +17,11 @@ The configuration file comprises the used nanopore device and the corresponding 
 
 ## Adapter Removal
 -Porechop
+
+```shell
+$ porechop -i <fastq_output_guppy.fastq> -o <porechopped.fastq> 
+```
+The above command will use the default values of porechop to search for adapters in the input fastq file, trim the reads and write them to file porechopped.fastq
 
 ## Filtering
 -NanoFilt
