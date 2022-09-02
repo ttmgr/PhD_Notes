@@ -23,9 +23,9 @@ The above command will use the default values of porechop to search for adapters
 -NanoFilt
 
 ```shell
-$ NanoFilt -q 7 -l 200 <porechopped.fastq> > <nanofiltered.fastq>
+$ NanoFilt -l 200 <porechopped.fastq> > <nanofiltered.fastq>
 ```
-Removes all reads with a read quality score below 7 and shorter than 200bp
+Removes all reads shorter than 200bp
 
 ## Assembly
 -Flye
@@ -40,6 +40,7 @@ The above command uses the high-quality polished nanopore reads and assembles th
 
 ```shell
 $ minimap2 -ax map-ont <flye_assembly.fasta> <reads.fastq> > <output.sam> -j 10
+$ miniasm -2S6 -f r7_2d.fastq.gz mapping.paf > output.gfa
 ```
 -Racon
 -Medaka
