@@ -26,13 +26,19 @@ The above command will use the default values of porechop to search for adapters
 ## Filtering
 -NanoFilt
 
+NanoFilt is a python script that can be used to filter reads based on length and quality as well as trimming parts of the sequence
+
 ```shell
-$ NanoFilt -l 200 <porechopped.fastq> > <nanofiltered.fastq>
+$ NanoFilt -l 200 -q 7 < <porechopped.fastq> > <nanofiltered.fastq>
 ```
-Removes all reads shorter than 200bp
+NanoFilt does not provide options for input or output files. Therefore we will use the two operators > and <
+
+With the option -l 200 we remove all sequences shorter than 200 nucleotides and with -q we filter all reads with a phred quality score lower than 7
 
 ## Assembly
 -Flye
+
+Flye is a de novo assembler for long-reads. Flye also produces a polished consensus sequence for the assembly which significantly reduces the error rate.
 
 ```shell
 $ flye --meta --nano-hq <input.fastq> -o /output_dir --genome-size 1m -i 7
