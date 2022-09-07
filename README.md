@@ -1,6 +1,8 @@
 # Workflow Metagenomics
 # Tim Reska 
 
+https://github.com/ttmgr/PhD_Notes/blob/main/Copy%20of%20computational_workflow_overviewv0.2.png
+
 # Applied software and the corresponding console commands
 ## basecalling 
 -guppy basecaller
