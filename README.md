@@ -5,14 +5,18 @@
 ## basecalling 
 -guppy basecaller
 
+The first step for each sequencing run is to basecall your data, i.e., produce fastq sequencing files from the initial fast5 files. We will use the standard basecaller is guppy developed by Oxford Nanopore.
+
 ```shell
 $ guppy_basecaller -i /input_directory_fast5 -s /output_directory -c <configuration_filge.cfg> [options]
 ```
-The configuration file comprises the used nanopore device and the corresponding kit
+The command above will call guppy on the input fast5 directory option (-i), write the output to the directory given with option -s in fastq format (option -o). The configuration file comprises the used nanopore device and the corresponding kit
 
 
 ## Adapter Removal
 -Porechop
+
+Porechop is a tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle, it is treated as chimeric and chopped into separate reads
 
 ```shell
 $ porechop -i <fastq_output_guppy.fastq> -o <porechopped.fastq> 
