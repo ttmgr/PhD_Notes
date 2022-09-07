@@ -60,6 +60,16 @@ The above command uses the raw nanopore reads and maps them to the draft genome 
 
 
 -Racon
+
+Consensus assemblies try to reduce error rates by choosing the most likely sequence of a given assembly and a set of raw reads. Although this does not incorporate the raw signal information of the flow cell to correct individual reads it can significantly improve the quality of an assembly. To improve a draft assembly with racon map the reads that should be used for error correction against the assembly. Use minimap to map the trimmed reads from prac3/nanofilt against the miniasm assembly and subsequently use the filtered reads and the mapping to build the consensus assembly
+
+```shell
+$ racon <nanofiltered_reads.fastq> 
+```
+
+
+
+
 -Medaka
 
 ## Binning
